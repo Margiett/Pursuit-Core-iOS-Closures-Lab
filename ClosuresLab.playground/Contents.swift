@@ -28,11 +28,10 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Your function here
 
-func multiples(arr: [Int]) -> [Int] {
-var n = [Int]()
-for multiples in n {
 
-    }
+func multiples(of n: Int, in numbers:Array<Int>) -> Array<Int>  {
+    return numbers.filter{$0 % n == 0} // dollar sign zero stands for the first index of the array
+    // % = for remainder equals to zero
 }
 // Uncomment out the following lines to check your solution
 
@@ -48,12 +47,14 @@ assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTw
 
 // Your function here
 
+func largestValue(in: Int [])
+
 // Uncomment out the following lines to check your solution
 
-//let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
-//let expectedOutputThree = 9
-//let outputThree = largestValue(in: moreNumbers)
-//assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
+let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
+let expectedOutputThree = 9
+let outputThree = largestValue(in: moreNumbers)
+assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
 
 
 // Question Four
