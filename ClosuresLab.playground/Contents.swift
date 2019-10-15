@@ -47,14 +47,14 @@ assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTw
 
 // Your function here
 
-func largestValue(in: Int [])
+
 
 // Uncomment out the following lines to check your solution
 
-let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
-let expectedOutputThree = 9
-let outputThree = largestValue(in: moreNumbers)
-assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
+//let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
+//let expectedOutputThree = 9
+//let outputThree = largestValue(in: moreNumbers)
+//assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
 
 
 // Question Four
@@ -62,30 +62,41 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
 // Your function here
+//input of our function: unsorted last name array of tuples
+// output of our function: sorted by lastname array of tuples
+
+func sortedNamesByLastName(in names: [(String, String)]) -> [(String, String)] {
+   let result = names.sorted { name1, name2 in 
+        // < means ascending, or a ....z
+        // > means descending, or z .... a
+       
+    }
+    return result
+}
 
 // Uncomment out the following lines to check your solution
 
-//let firstAndLastTuples = [
-//    ("Johann S.", "Bach"),
-//    ("Claudio", "Monteverdi"),
-//    ("Duke", "Ellington"),
-//    ("W. A.", "Mozart"),
-//    ("Nicolai","Rimsky-Korsakov"),
-//    ("Scott","Joplin"),
-//    ("Josquin","Des Prez")
-//]
-//let expectedOutputFour = [
-//    ("Johann S.", "Bach"),
-//    ("Josquin","Des Prez"),
-//    ("Duke", "Ellington"),
-//    ("Scott","Joplin"),
-//    ("Claudio", "Monteverdi"),
-//    ("W. A.", "Mozart"),
-//    ("Nicolai","Rimsky-Korsakov")
-//]
-
-//let outputFour = sortedNamesByLastName(in: firstAndLastTuples)
-//assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
+let firstAndLastTuples = [
+    ("Johann S.", "Bach"),
+    ("Claudio", "Monteverdi"),
+    ("Duke", "Ellington"),
+    ("W. A.", "Mozart"),
+    ("Nicolai","Rimsky-Korsakov"),
+    ("Scott","Joplin"),
+    ("Josquin","Des Prez")
+]
+let expectedOutputFour = [
+    ("Johann S.", "Bach"),
+    ("Josquin","Des Prez"),
+    ("Duke", "Ellington"),
+    ("Scott","Joplin"),
+    ("Claudio", "Monteverdi"),
+    ("W. A.", "Mozart"),
+    ("Nicolai","Rimsky-Korsakov")
+]
+print(sortedNamesByLastName(in: firstAndLastTuples))
+let outputFour = sortedNamesByLastName(in: firstAndLastTuples)
+assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
 
 
 // Question Five
