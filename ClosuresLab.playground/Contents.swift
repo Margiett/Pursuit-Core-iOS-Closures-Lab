@@ -65,14 +65,21 @@ assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTw
 //input of our function: unsorted last name array of tuples
 // output of our function: sorted by lastname array of tuples
 
-func sortedNamesByLastName(in names: [(String, String)]) -> [(String, String)] {
-   let result = names.sorted { name1, name2 in 
-        // < means ascending, or a ....z
-        // > means descending, or z .... a
-       
+//func sortedNamesByLastName(in names: [(String, String)]) -> [(String, String)] {
+//   let result = names.sorted { name1, name2 in
+//        // < means ascending, or a ....z
+//        // > means descending, or z .... a
+//
+//    }
+//    return result
+//}
+func sortedNamesByLastName(in names: [(String , String)]) -> [(String , String)] {
+    
+    let results = names.sorted { names1, names2 in names1.1 < names2.1
     }
-    return result
+    return results
 }
+
 
 // Uncomment out the following lines to check your solution
 
